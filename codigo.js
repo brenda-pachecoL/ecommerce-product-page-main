@@ -77,3 +77,61 @@ if(direccion1=='adelante'){
 }
 
 }*/
+
+var imagenes = ["images/image-product-1.jpg","images/image-product-2.jpg","images/image-product-3.jpg","images/image-product-4.jpg"];
+var imagenActual = 0;
+
+document.getElementById("anterior").addEventListener("click",cambiarImagen);
+document.getElementById("siguiente").addEventListener("click",cambiarImagen);
+
+function cambiarImagen (){
+    var boton = this.id;
+    if(boton == "anterior"){
+        imagenActual --;
+        if(imagenActual < 0){
+            imagenActual = imagenes.length -1;
+        }
+    } else{
+        imagenActual ++;
+        if (imagenActual == imagenes.length){
+            imagenActual = 0;
+        }
+    }
+    var imagenMostrar = imagenes[imagenActual];
+    document.getElementById("imagen") = imagenMostrar
+}
+//paso 1 --> crear el array de imagenes
+var arrayImagenes = ["images/image-product-1.jpg" , "images/image-product-2.jpg","images/image-product-3.jpg" , "images/image-product-4.jpg"]
+
+//que imagen mostramos
+var imagenActual = 0;
+
+//Cada 2 segundos se ejecute esta funcion
+var temporizador;
+
+
+//paso 2: listeners de los botones de anterior y siguiente
+document.getElementById("anterior").addEventListener("click", cambiarImagen);
+document.getElementById("siguiente").addEventListener("click", cambiarImagen);
+
+//paso 3: Definir la función
+function cambiarImagen() {
+    var boton = this.id;
+    
+    if(boton == 'anterior') {
+        imagenActual --;
+        if(imagenActual < 0) {
+            imagenActual = arrayImagenes.length -1; 
+        } 
+    } else {
+        imagenActual ++;
+        if(imagenActual == arrayImagenes.length) {
+            imagenActual = 0;
+        } 
+    }
+    var imagenAMostrar = arrayImagenes [imagenActual];
+    document.getElementById('imagen').src =  imagenAMostrar;
+}
+
+
+

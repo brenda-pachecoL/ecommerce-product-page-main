@@ -133,14 +133,14 @@ body{
     cursor: pointer;
     transform: scale(1.2,1.2);
 }
-.anterior{
+#anterior{
     left: 5%;
     top:50%;
     position: absolute;
 }
 
-.siguiente{
-    left: 85%;
+#siguiente{
+    right: 2%;
     top: 50%;
     position: absolute;
 }

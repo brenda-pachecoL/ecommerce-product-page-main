@@ -107,16 +107,16 @@ body{
 .carrousel{
     width: 100%;
     height: 780;
+    position: relative;
 }
 .carrousel img{
+    top: 40%;
     width: 100%;
-    position: absolute;
 }
 .boton{
-    position: relative;
-    font-size: 30px;
-    width: 14%;
-    height: 41px;
+    font-size: 18px;
+    width: 10%;
+    height: 39px ;
     line-height: 39px;
     border-radius: 125%;
     background-color: var(--White);
@@ -133,14 +133,16 @@ body{
     cursor: pointer;
     transform: scale(1.2,1.2);
 }
-.atras{
-    left: 2%;
-    top: calc(113% - 70%);
+.anterior{
+    left: 5%;
+    top:50%;
+    position: absolute;
 }
 
-.adelante{
-    right: 2%;
-    top: calc(113% - 70%);
+.siguiente{
+    left: 85%;
+    top: 50%;
+    position: absolute;
 }
 .img-carrousel{
     width: 100%;

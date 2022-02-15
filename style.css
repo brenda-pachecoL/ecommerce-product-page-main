@@ -10,6 +10,18 @@
 }
 body{
     font-size: 16px;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Spartan', sans-serif;
+    
+
+}
+.container-pag{
+    max-width: 1440px;
 }
 .container-product{
     display: flex;
@@ -17,6 +29,13 @@ body{
 }
 .product{
     width: 40%;
+}
+#cantidad-productos{
+    border-radius: 66%;
+    background: var(--orange);
+    color: var(--Very-vark-blue);
+    width: 31px;
+    height: 31px;
 }
 .img-container{
     width: 100%;
@@ -33,6 +52,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    
 }
 .img-container img{
     height: 450px;
@@ -68,6 +88,9 @@ body{
     color: var(--orange);
     font-size: 20px;
 }
+#mostrarCantidadProducto{
+    width: 25%;
+}
 .cont-contador{
     display: flex;
     width: 25%;
@@ -102,12 +125,16 @@ body{
     background-color: var(--orange);
     color: var(--White);
 }
+.card{
+    cursor: pointer;
+}
 
 
 .carrousel{
     width: 100%;
     height: 780;
     position: relative;
+    display: none;
 }
 .carrousel img{
     top: 40%;
@@ -116,7 +143,7 @@ body{
 .boton{
     font-size: 18px;
     width: 10%;
-    height: 39px ;
+    height: 55px ;
     line-height: 39px;
     border-radius: 125%;
     background-color: var(--White);
@@ -128,22 +155,188 @@ body{
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
+    border: none;
+    color: black;
 }
 .boton:hover{
     cursor: pointer;
     transform: scale(1.2,1.2);
 }
 #anterior{
-    left: 5%;
+    left: 10%;
     top:50%;
     position: absolute;
 }
+#anterior img{
+    width: fit-content;
+}
 
 #siguiente{
-    right: 2%;
+    right: 5%;
     top: 50%;
     position: absolute;
 }
+#siguiente img{
+    width: fit-content;
+}
 .img-carrousel{
     width: 100%;
+}
+/*menu hamburguesa*/
+.menu-hamburguesa{
+    display:none;
+}
+/* menu desktop*/
+
+.menu{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.menu h1{
+    width: 30%;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.menu-desktop{
+    width: 70%;
+}
+.menu-desktop nav{
+    width: 100%;
+}
+.menu-desktop nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+}
+.cont-menu{
+    display: flex;
+    background-color: aliceblue;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+.cont-cart{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.profile{
+    width: 80px;
+    border: 10px;
+    border-color: orange;
+}
+.profile:hover{
+    cursor: pointer;
+    margin: 10px 20px;
+    border-radius: 80%;
+    background-color: orange;
+    overflow: hidden;
+}
+
+/*   MODAL   */
+.modal{
+    width: 10%;
+    height: 100vh;
+    position: fixed;
+    top: 10%;
+    left: 70%;
+    display: flex;
+}
+.modal-content{
+    height: 100px;
+    background-color: blueviolet;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 5%;
+}
+
+/*    Modal de la imagen   */
+.modal-container-img{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.modalImg{
+    width: 38%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    position: relative;
+    position: transform 1s;
+    transform: translateY(0%);
+}
+.modal-close{
+   transform: translateY(-200%);
+}
+
+@media (max-width: 600px){
+    *{
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+        display: flex;
+
+    }
+    .container-pag{
+        width: 100%;
+        height: 100vh;
+    }
+    header{
+        width: 100%;
+        height: 80px;
+        background-color: chocolate;
+        display: flex;
+    }
+    header h1{
+        height: 40px;
+        padding: 20px 50px;
+    }
+    .carrousel{
+        display: block;
+    }
+    .product{
+        display: none;
+    }
+    .container-price{
+        width: 90%;
+        margin: 4%;
+    }
+    .container-cart{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cont-contador{
+        width: 80%;
+        justify-content: space-between;
+    }
+    #addToCart{
+        width: 100%;
+        height: 40px;
+    }
+
 }

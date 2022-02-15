@@ -7,8 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | E-commerce product page</title>
-  
-
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -16,79 +15,136 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Sneaker</h1>
-    <div class="respmenu">
-      <input type="checkbox">
-      <i class="fas fa-bars"></i>
-      <i class="fas fa-times"></i>
-      <nav>
-        <ul>
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contac</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div>
-      <img src="./images/image-avatar.png" alt="">
-    </div>
-  </header>
-  <section class="container-product">
-    <div class="product">
-
-      <div class="img-container">
-        <img id="imageBox" src="./images/image-product-1.jpg" alt="">
+  <div class="container-pag"> 
+    <header>
+      <div class="cont-menu">
+        <nav class="menu-hamburguesa"> 
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <img src="./images/icon-menu.svg" alt="">
+          </label>
+          <ul>
+            <li><a class="active" href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="menu">
+          <h1>sneakers</h1>
+          <div class="menu-desktop">
+            <nav>
+              <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+  
+        </nav>
+    
+        <div class="cont-cart">
+          <button type="button" id="card_btn" onclick="mostrarProductosCarrito()"    class="card"></button>
+          <img class="profile" src="./images/image-avatar.png" alt="">
+        </div>
       </div>
     
-      <div class="product-small-img">
-        <img src="./images/image-product-1.jpg" onclick="myFuction(this)"  alt="">
-        <img src="/images/image-product-2.jpg"  onclick="myFuction(this)"   alt="">
-        <img src="./images/image-product-3.jpg" onclick="myFuction(this)"  alt="">
-        <img src="./images/image-product-4.jpg" onclick="myFuction(this)"  alt="">
-      </div>
-
+    </header>
+    <div class="carrousel">
+      <img id='imagen' src='images/image-product-1.jpg'>
+      <button class="boton" type="button" id="anterior" > <img src="./images/icon-previous.svg" alt=""></button>
+      
+      <button class="boton" type="button" id="siguiente" > <img src="./images/icon-next.svg" alt=""></button>
     </div>
+    <section class="container-product">
+      <div class="product">
+  
+        <div class="img-container">
+          <img id="imageBox" onclick="abrirModalContainer()" src="./images/image-product-1.jpg" alt="">
+        </div>
+      
+        <div class="product-small-img">
+          <img src="./images/image-product-1.jpg" id="producto" onclick="myFuction(this)"  alt="">
+          <img src="/images/image-product-2.jpg"  onclick="myFuction(this)"   alt="">
+          <img src="./images/image-product-3.jpg" onclick="myFuction(this)"  alt="">
+          <img src="./images/image-product-4.jpg" onclick="myFuction(this)"  alt="">
+        </div>
+  
+      </div>
+    
+   
+      <nav class="container-price">
+        <nav>
+          <p>Sneaker Company</p>
+          <p> Fall Limited Edition <br> Sneakers</p>
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        </nav>
+  
+        <nav>
+          <nav class="cont-discount-price">
+            <p class="price">$125.00</p>
+            <p class="discount">50%</p>
+          </nav>
+          <nav >
+            <del>$250.00</del>
+          </nav>
+        </nav>
+  
+        <nav class="container-cart">
+          <nav class="cont-contador">
+            <button class="minus" onclick="minusButton()" id="minusButon" type="button"> <img src="./images/icon-minus.svg" alt=""> </button>
+            <input type="number" min="0" value="0" id="mostrarCantidadProducto">
+            <button class="plus" type="button" id="plusBoton" onclick="addPlus()"> <img src="./images/icon-plus.svg" alt=""> </button>
+          </nav>
+          <nav class="container-add-cart">
+            <button id="addToCart" type="button" onclick="addProducto()" > <img src="./images/icon-cart.svg" alt=""> Add to cart</button>
+           
+          </nav>
+        </nav>
+      </nav>
+      
+     
+    
+    </section>
+    
+    
+      <img id="obtenerImg" src="imagen" alt="">
+    </div>
+  </div>
+  
+
+  <div id="modal_container">
+    
+   
+  </div>
+
+
+
+  <div class="modal-container-img">
+      <div class="modalImg modal-close">
+          <button onclick="cerrarModalContainer()" type="button"><img src="./images/icon-close.svg" alt=""></button>
+          <di class="box-img-modal">
+  
+            <div class="img-container">
+              <img id="imageBox" ondblclick="imagen()"  src="./images/image-product-1.jpg" alt="">
+            </div>
+          
+            <div class="product-small-img">
+              <img src="./images/image-product-1.jpg" id="producto" onclick="myFuction(this)"  alt="">
+              <img src="/images/image-product-2.jpg"  onclick="myFuction(this)"   alt="">
+              <img src="./images/image-product-3.jpg" onclick="myFuction(this)"  alt="">
+              <img src="./images/image-product-4.jpg" onclick="myFuction(this)"  alt="">
+            </div>
+      </div>
+  </div>
+
   
  
-    <nav class="container-price">
-      <nav>
-        <p>Sneaker Company</p>
-        <p> Fall Limited Edition <br> Sneakers</p>
-        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
-          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-      </nav>
-
-      <nav>
-        <nav class="cont-discount-price">
-          <p class="price">$125.00</p>
-          <p class="discount">50%</p>
-        </nav>
-        <nav >
-          <del>$250.00</del>
-        </nav>
-      </nav>
-
-      <nav class="container-cart">
-        <nav class="cont-contador">
-          <button class="minus" type="button"> - </button>
-          <p> 0 </p>
-          <button class="plus" type="button"> + </button>
-        </nav>
-        <nav class="container-add-cart">
-          <button type="button"> Add to cart</button>
-        </nav>
-      </nav>
-    </nav>
-  
-  </section>
-  <div class="carrousel">
-    <img id='imagen' src='images/image-product-1.jpg'>
-    <input class="boton" type="button" id="anterior" value="<" >
-    <input class="boton" type="button" id="siguiente" value=">"><br>
-  </div>
   
   <script src="./codigo.js"></script>
 </body>

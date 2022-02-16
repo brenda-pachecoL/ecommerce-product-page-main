@@ -21,14 +21,19 @@ body{
 
 }
 .container-pag{
-    max-width: 1440px;
+    max-width: 2000px;
+    height: 100vh;
 }
 .container-product{
     display: flex;
     justify-content: space-around;
+    height: 80%;
+    align-items: center;
 }
 .product{
-    width: 40%;
+    width: 50%;
+    height: 80%;
+   
 }
 #cantidad-productos{
     border-radius: 66%;
@@ -39,6 +44,16 @@ body{
 }
 .img-container{
     width: 100%;
+    height: 80%;
+}
+.img-container img{
+    height: 450px;
+}
+.img-container img{
+    padding: 10px;
+    width: 95%;
+    border-radius: 5%;
+    height: 100%;
 }
 .product-small-img img{
     width: 18%;
@@ -54,29 +69,51 @@ body{
     justify-content: space-around;
     
 }
-.img-container img{
-    height: 450px;
-}
-.img-container img{
-    padding: 10px;
-    width: 95%;
-    border-radius: 5%;
-}
+
 .container-price{
     width: 40%;
+    height: 65%;
+   
+}
+.inf-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--orange);
+}
+.sub-title{
+    color: var(--Very-vark-blue);
+    font-weight: 700;
+    font-size: 47px;
+}
+.textP{
+    color: var(--Dark-grayish-blue);
+    font-size: 18px; 
+}
+del{
+    color: var(--Dark-grayish-blue);
 }
 .cont-discount-price{
     display: flex;
     width: 30%;
     justify-content: space-between;
+    align-items: center;
 }
 .price{
     padding: 2%;
+    font-size: x-large;
+    font-weight: 700;
 }
 .discount{
     padding: 2%;
     color: var(--orange);
     background-color: var(--Pale-orange);
+    font-weight: 700;
+    margin: 17%;
 }
 .minus{
     background-color: var(--Light-grayish-blue);
@@ -84,7 +121,7 @@ body{
     font-size: 20px;
 }
 .plus{
-    background-color: var(--Light-grayish-blue);
+    background-color: var(--Pale-orange);
     color: var(--orange);
     font-size: 20px;
 }
@@ -94,17 +131,26 @@ body{
 .cont-contador{
     display: flex;
     width: 25%;
-    height: 35px;
-    background-color: var(--Light-grayish-blue);
+    height: 60px;
+    background-color: var(--Pale-orange);
     justify-content: space-around;
     align-items: center;
+}
+.cont-contador input{
+    border-color: transparent;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+
+    border: none;
+    background-color: var(--Pale-orange) ;
 }
 .cont-contador button{
     height: fit-content;
     outline: none;
     text-decoration: none;
     border: none;
-    background-color: var(--Light-grayish-blue) ;
+    background-color: var(--Pale-orange) ;
 
 }
 .cont-contador button:hover{
@@ -112,10 +158,12 @@ body{
 }
 .container-cart{
     display: flex;
+    margin-top: 10%;
+    justify-content: space-around;
 }
 .container-add-cart{
     display: flex;
-    width: 90%;
+    width: 60%;
 }
 
 
@@ -124,6 +172,7 @@ body{
     border-radius: 10px;
     background-color: var(--orange);
     color: var(--White);
+    border-color: transparent;
 }
 .card{
     cursor: pointer;
@@ -194,6 +243,20 @@ body{
     align-items: center;
     justify-content: flex-start;
 }
+.menu a{
+    text-decoration: none;
+    color: var(--Very-vark-blue);
+}
+.menu a:hover{
+    color: var(--Grayish-blue);
+}
+.collections{
+    text-decoration: none;
+
+}
+.collections:hover{
+    color: var(--Grayish-blue);
+}
 .menu h1{
     width: 30%;
     font-weight: 700;
@@ -216,10 +279,10 @@ header{
     justify-content: space-around;
     flex-direction: row;
     width: 100%;
+    height: 10%;
 }
 .cont-menu{
     display: flex;
-    background-color: aliceblue;
     width: 90%;
     align-items: center;
     justify-content: space-between;
@@ -337,6 +400,9 @@ header{
     #addToCart{
         width: 100%;
         height: 40px;
+    }
+    .menu-desktop{
+        display: none;
     }
 
 }

@@ -181,6 +181,7 @@ function addProducto(){
     
         }
         else{
+            
             var sumandoProducto =parseInt (localStorage.getItem('cantidadProductoGuardado')) + parseInt (cantidadContador);
             localStorage.setItem('cantidadProductoGuardado',sumandoProducto);
             cantidadContador=0;
@@ -282,6 +283,11 @@ function mostrarProductosCarrito(){
              </div>
         </div>
              <button>Checkout</button>`;
+             
+             modal_cont.style.background="orange";
+             modal_cont.style.flex;
+             
+             
         }
          console.log(cerrar_abrir)
     }
@@ -294,9 +300,10 @@ let modalConteiner = document.querySelectorAll(".modal-container-img");
 let modalImagen = document.querySelectorAll(".modalImg");
 
 function abrirModalContainer (){
-    modalConteiner.style.opacity = "1";
     modalConteiner.style.visibility = "visible";
-    alert("opacyti")
+    modalConteiner.style.background ="orange"
+    document.getElementById("modalImgSneakers").style.visibility = "visible";
+    
 
 
 }
@@ -306,3 +313,9 @@ function hoa(){
 }
 
 
+/*position: absolute;
+    top: 10%;
+    left: 67%;
+    height: 20%;
+    background: #ee5b5b;
+    width: 30%;*/

@@ -175,7 +175,16 @@ del{
     border-color: transparent;
 }
 .card{
+    background-color: transparent;
+    border-color: transparent;
     cursor: pointer;
+}
+.card p{
+    background-color: var(--orange);
+    color: var(--White);
+    font-weight: 700;
+    border-radius: 97px;
+    margin: 0;
 }
 
 
@@ -184,10 +193,12 @@ del{
     height: 780;
     position: relative;
     display: none;
+    
 }
 .carrousel img{
     top: 40%;
     width: 100%;
+
 }
 .boton{
     font-size: 18px;
@@ -323,11 +334,22 @@ header{
     text-align: center;
     border-radius: 5%;
 }
+/* MODAL DEL CARRITO*/
+.modal_container{
+    position: absolute;
+    top: 10%;
+    left: 67%;
+    height: 20%;
+    background: #ee5b5b;
+    width: 30%;
+}
 
 /*    Modal de la imagen   */
+
 .modal-container-img{
     opacity: 0;
     visibility: hidden;
+   
     position: fixed;
     z-index: 10000;
     width: 100%;
@@ -372,12 +394,16 @@ header{
     header{
         width: 100%;
         height: 80px;
-        background-color: chocolate;
+        background-color: var(--White);
         display: flex;
+    }
+    .profile{
+        width: 30px;
     }
     header h1{
         height: 40px;
         padding: 20px 50px;
+        background-color: violet;
     }
     .carrousel{
         display: block;
@@ -389,13 +415,24 @@ header{
         width: 90%;
         margin: 4%;
     }
+    .contDatosCard{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .container-cart{
         flex-direction: column;
         align-items: center;
     }
     .cont-contador{
-        width: 80%;
-        justify-content: space-between;
+        width: 100%;
+        justify-content: space-around;
+        border-radius: 10px;
+    }
+    .container-add-cart{
+    display: flex;
+    width: 100%;
+    margin: 6%;
     }
     #addToCart{
         width: 100%;
@@ -403,6 +440,13 @@ header{
     }
     .menu-desktop{
         display: none;
+    }
+    .container-product{
+        align-items: flex-start;
+    }
+    .inf-cont{
+        height: 70%;
+        justify-content: space-around;
     }
 
 }

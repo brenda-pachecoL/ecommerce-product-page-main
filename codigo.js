@@ -176,9 +176,8 @@ function addProducto(){
             card_btn.innerHTML=`
          <p>${obtenerValor} </p>
          <img src="./images/icon-cart.svg" alt=""  >`;
-           alert(obtenerValor)
+          // alert(obtenerValor)
             
-    
         }
         else{
             
@@ -307,11 +306,14 @@ function abrirModalContainer (){
 
 
 }
+ var contenedorMenu =document.getElementById("menuHamburguesa");
+function  desplegarMenuHamburguesa (){
+    contenedorMenu.classList.add('active');
 
-function hoa(){
-    alert("hola")
 }
-
+function cerrarMenuHamburgues(){
+    contenedorMenu.classList.add('disabled');
+}
 
 /*position: absolute;
     top: 10%;

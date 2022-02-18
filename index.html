@@ -17,20 +17,16 @@
 <body>
   <div class="container-pag"> 
     <header>
+
       <div class="cont-menu">
-        <nav class="menu-hamburguesa"> 
-          <input type="checkbox" id="check">
-          <label for="check" class="checkbtn">
-            <img src="./images/icon-menu.svg" alt="">
-          </label>
-          <ul>
-            <li><a class="active" href="#">Collections</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="menu-hamburguesaIcono">
+          <button onclick="desplegarMenuHamburguesa()" >
+            <img  src="./images/icon-menu.svg" alt="">
+          </button>
+          <p> sneakers</p>
+        </div>
+
+
         <nav class="menu">
           <h1>sneakers</h1>
           <div class="menu-desktop">
@@ -44,7 +40,6 @@
               </ul>
             </nav>
           </div>
-  
         </nav>
     
         <div class="cont-cart">
@@ -52,15 +47,34 @@
           <img class="profile" src="./images/image-avatar.png" alt="">
         </div>
       </div>
-    
     </header>
+
     <div class="carrousel">
       <img id='imagen' src='images/image-product-1.jpg'>
       <button class="boton" type="button" id="anterior" > <img src="./images/icon-previous.svg" alt=""></button>
       
       <button class="boton" type="button" id="siguiente" > <img src="./images/icon-next.svg" alt=""></button>
     </div>
-    <section class="container-product">
+    <section class="container-product ">
+      <div id="menuHamburguesa" class="cont-menu-hamburguesa " id="menu">
+        <section class="hamburguesa-cont">
+          <section class="cont-close" onclick="cerrarMenuHamburgues()">
+            <button>
+
+            <img src="./images/icon-close.svg" alt="">
+            </button>
+          </section>
+          <section class="menu-section">
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </section>
+        </section>
+        
+        
+      </div>
       <div class="product">
   
         <div class="img-container">
@@ -148,5 +162,6 @@
  
   
   <script src="./codigo.js"></script>
+ 
 </body>
 </html>

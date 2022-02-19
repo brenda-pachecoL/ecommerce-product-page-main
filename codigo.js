@@ -307,12 +307,18 @@ function abrirModalContainer (){
 
 }
  var contenedorMenu =document.getElementById("menuHamburguesa");
-function  desplegarMenuHamburguesa (){
+function desplegarMenuHamburguesa (){
+
     contenedorMenu.classList.add('active');
+    contenedorMenu.classList.remove('disabled');
+    
+    
 
 }
 function cerrarMenuHamburgues(){
+    contenedorMenu.classList.remove("active");
     contenedorMenu.classList.add('disabled');
+    
 }
 
 /*position: absolute;

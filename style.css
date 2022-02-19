@@ -20,6 +20,9 @@ body{
     
 
 }
+.contenedor{
+    position: relative;
+}
 .container-pag{
     max-width: 2000px;
     height: 100vh;
@@ -340,13 +343,14 @@ header{
     border-radius: 5%;
 }
 /* MODAL DEL CARRITO*/
-.modal_container{
+#modal_container{
+    background: white;
+    top: 0;
     position: absolute;
-    top: 10%;
-    left: 67%;
-    height: 20%;
-    background: #ee5b5b;
-    width: 30%;
+    left: 70%;
+    box-shadow: 0px 8px 20px -6px #373434;
+    width: 29%;
+    border-radius: 10px;
 }
 
 /*    Modal de la imagen   */
@@ -379,6 +383,9 @@ header{
 }
 .modal-close{
    transform: translateY(-200%);
+}
+.menu-hamburguesaIcono{
+    display: none;
 }
 
 @media (max-width: 600px){
@@ -463,6 +470,9 @@ header{
         align-items: center;
         justify-content: space-around;
     }
+    .menu-hamburguesaIcono p{
+        font-weight: 700;
+    }
     .menu-hamburguesaIcono button{
         background: transparent;
         border: transparent;
@@ -502,11 +512,15 @@ header{
         height: 7%;
         padding: 7%;
     }
+    .cont-close button{
+        border-color: transparent;
+        background-color: transparent;
+    }
     .menu-section{
         width: 80%;
         display: flex;
         flex-direction: column;
-        height: 15%;
+        height: 30%;
         align-items: flex-start;
         justify-content: space-between;
     }

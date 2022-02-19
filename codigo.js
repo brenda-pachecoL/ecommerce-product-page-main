@@ -307,10 +307,12 @@ function abrirModalContainer (){
 
 }
  var contenedorMenu =document.getElementById("menuHamburguesa");
+ var contenedorBody = document.getElementById("contBody");
 function desplegarMenuHamburguesa (){
 
     contenedorMenu.classList.add('active');
     contenedorMenu.classList.remove('disabled');
+    contenedorBody.style.overflow = "hidden";
     
     
 
@@ -318,6 +320,7 @@ function desplegarMenuHamburguesa (){
 function cerrarMenuHamburgues(){
     contenedorMenu.classList.remove("active");
     contenedorMenu.classList.add('disabled');
+    contenedorBody.style.overflow = "initial";
     
 }
 
